@@ -1,0 +1,27 @@
+{
+  "siteName": "Karuppuchamy Kaliappan",
+  "authorName": "Karuppuchamy Kaliappan",
+  "email": "you@example.com",
+  "linkedIn": "https://www.linkedin.com/in/karuppuchamy-kaliappan",
+  "github": "https://github.com/karuppumca86",
+  "availability": "I typically respond within a few days. I'm most interested in conversations about architectural challenges, speaking opportunities, and thoughtful technical discussions.",
+  "thesis": "Software architecture is the art of making decisions that are expensive to change. I focus on understanding constraints deeply before proposing solutions, because the right architecture emerges from the problem, not from a template.",
+  "domains": [
+    {
+      "name": "Distributed Systems",
+      "description": "Designing for failure, consistency, and coordination"
+    },
+    {
+      "name": "Platform Engineering",
+      "description": "Building foundations that teams actually want to use"
+    },
+    {
+      "name": "Data Architecture",
+      "description": "Moving, transforming, and governing information at scale"
+    },
+    {
+      "name": "System Evolution",
+      "description": "Migrating legacy systems without stopping the business"
+    }
+  ]
+}

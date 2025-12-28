@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="My approach to software architecture: understanding constraints deeply, making reversible decisions when possible, and designing for evolution.">
+  <meta name="author" content="Karuppuchamy Kaliappan">
+  <title>About - Karuppuchamy Kaliappan</title>
+  
+  <!-- Favicon -->
+  <link rel="icon" href="/favicon.svg" type="image/svg+xml">
+  
+  <!-- Open Graph -->
+  <meta property="og:title" content="About - Karuppuchamy Kaliappan">
+  <meta property="og:description" content="My approach to software architecture: understanding constraints deeply, making reversible decisions when possible, and designing for evolution.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://yoursite.com/about.html">
+  
+  <!-- Styles -->
+  <link rel="stylesheet" href="/css/reset.css">
+  <link rel="stylesheet" href="/css/typography.css">
+  <link rel="stylesheet" href="/css/layout.css">
+  <link rel="stylesheet" href="/css/components.css">
+</head>
+<body>
+  <!-- Skip Link for Accessibility -->
+  <a href="#main" class="skip-link">Skip to main content</a>
+
+  <!-- Site Header -->
+  <header class="site-header">
+    <div class="container">
+      <nav class="nav" aria-label="Main navigation">
+        <a href="/" class="nav__logo">Karuppuchamy Kaliappan</a>
+        
+        <!-- Mobile Toggle -->
+        <button 
+          class="nav__toggle" 
+          aria-expanded="false" 
+          aria-controls="nav-menu"
+          aria-label="Toggle navigation menu"
+        >
+          <span class="hamburger">
+            <span class="hamburger__line"></span>
+            <span class="hamburger__line"></span>
+            <span class="hamburger__line"></span>
+          </span>
+        </button>
+        
+        <!-- Navigation Menu -->
+        <ul id="nav-menu" class="nav__menu">
+          <li><a href="/" class="nav__link">Home</a></li>
+          <li><a href="/about.html" class="nav__link nav__link--active">About</a></li>
+          <li><a href="/contact.html" class="nav__link">Contact</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Main Content -->
+  <main id="main" class="main">
+    <div class="container">
+      
+      <!-- Page Header -->
+      <header class="page-header">
+        <h1 class="page-header__title">About Me</h1>
+        <p class="page-header__description">
+          How I think about architecture, the principles I follow, and the problems I find most interesting.
+        </p>
+      </header>
+
+      <!-- Philosophy Section -->
+      <section class="section prose" aria-labelledby="philosophy-heading">
+        <h2 id="philosophy-heading" class="section__title">My Approach to Architecture</h2>
+        
+        <p>
+          I've spent over fourteen years building software systems, and the most important lesson 
+          I've learned is that architecture isn't about choosing the right framework or following 
+          the latest patterns. It's about understanding the problem space deeply enough that the 
+          right structure emerges from the constraints.
+        </p>
+        
+        <p>
+          Every architectural decision is a bet on the future. Some bets are cheap to reverse—you 
+          can switch a library, refactor a module, or rewrite a microservice. Other bets are 
+          expensive: database schemas, API contracts, fundamental data models. The art of 
+          architecture is knowing which decisions fall into which category and investing your 
+          thinking time accordingly.
+        </p>
+        
+        <p>
+          I've seen too many systems fail not because of technical mistakes, but because of 
+          organizational ones. The best architecture in the world doesn't matter if the teams 
+          building it can't coordinate effectively, or if the incentive structures push people 
+          toward local optimizations that harm the whole. Good architecture is as much about 
+          people and communication as it is about code.
+        </p>
+      </section>
+
+      <!-- Principles Section -->
+      <section class="section" aria-labelledby="principles-heading">
+        <h2 id="principles-heading" class="section__title">Core Principles</h2>
+        
+        <ul class="principles-list">
+          <li class="principle">
+            <h3 class="principle__title">Understand Before You Solve</h3>
+            <p class="principle__description">
+              The most common architectural mistake is solving the wrong problem. I spend more time 
+              than most people expect asking questions, mapping constraints, and understanding the 
+              actual goals before proposing solutions. The right architecture often becomes obvious 
+              once the problem is properly understood.
+            </p>
+            <p class="principle__tradeoff">
+              <strong>Trade-off:</strong> This approach requires patience from stakeholders who want 
+              to see progress quickly. I've learned to balance thorough understanding with delivering 
+              early, incremental value.
+            </p>
+          </li>
+          
+          <li class="principle">
+            <h3 class="principle__title">Design for Evolution, Not Perfection</h3>
+            <p class="principle__description">
+              Systems change. Requirements change. Understanding changes. The goal isn't to design 
+              the perfect system today—it's to design a system that can evolve as you learn more. 
+              This means favoring loose coupling, clear boundaries, and reversible decisions 
+              wherever possible.
+            </p>
+            <p class="principle__tradeoff">
+              <strong>Trade-off:</strong> Designing for change can add apparent complexity upfront. 
+              I'm careful to distinguish between accidental complexity (waste) and essential 
+              complexity (investment in future flexibility).
+            </p>
+          </li>
+          
+          <li class="principle">
+            <h3 class="principle__title">Make the Right Thing the Easy Thing</h3>
+            <p class="principle__description">
+              Good architecture shapes behavior. When the easiest path through a system also 
+              happens to be the correct path, you don't need to rely on discipline or 
+              documentation—the structure itself guides people toward good outcomes.
+            </p>
+            <p class="principle__tradeoff">
+              <strong>Trade-off:</strong> Building paved roads takes time. Sometimes you need to 
+              ship now and build the roads later. The key is knowing when you're accumulating 
+              technical debt and having a plan to address it.
+            </p>
+          </li>
+          
+          <li class="principle">
+            <h3 class="principle__title">Optimize for Understanding</h3>
+            <p class="principle__description">
+              Code is read far more often than it's written. Systems are debugged far more often 
+              than they're designed. I prioritize clarity over cleverness, explicit over implicit, 
+              and boring technology over exciting technology when the problem doesn't demand otherwise.
+            </p>
+            <p class="principle__tradeoff">
+              <strong>Trade-off:</strong> Sometimes the most understandable approach isn't the 
+              most performant or the most elegant. I make conscious trade-offs between clarity 
+              and other qualities, documenting why when the choice isn't obvious.
+            </p>
+          </li>
+        </ul>
+      </section>
+
+      <!-- Problems I Enjoy Section -->
+      <section class="section prose" aria-labelledby="problems-heading">
+        <h2 id="problems-heading" class="section__title">Problems I Enjoy Solving</h2>
+        
+        <p>
+          Not all problems are equally interesting to me. I'm drawn to challenges that require 
+          balancing multiple competing concerns, understanding complex systems, and finding 
+          solutions that are both technically sound and organizationally viable.
+        </p>
+        
+        <p>
+          I find particular satisfaction in <strong>legacy modernization</strong>—taking systems 
+          that have grown organically over years and finding paths to improve them without 
+          stopping the business. These problems require deep technical knowledge, political 
+          navigation, and the patience to execute multi-year transformations.
+        </p>
+        
+        <p>
+          I'm also energized by <strong>platform challenges</strong>: building internal systems 
+          that other teams use as foundations. The puzzle of making something that's powerful 
+          enough for experts but accessible enough for newcomers, flexible enough to handle 
+          edge cases but opinionated enough to guide toward good defaults—that's the kind of 
+          design challenge I find genuinely engaging.
+        </p>
+        
+        <p>
+          Finally, I enjoy problems at the <strong>intersection of technology and organization</strong>. 
+          How do you structure a system so that teams can work independently? How do you design 
+          APIs that create good incentives? How do you build consensus around architectural 
+          direction without slowing everything down? These sociotechnical problems are often 
+          harder—and more impactful—than purely technical ones.
+        </p>
+      </section>
+
+    </div>
+  </main>
+
+  <!-- Site Footer -->
+  <footer class="site-footer">
+    <div class="container">
+      <p>&copy; 2025 Karuppuchamy Kaliappan. All rights reserved.</p>
+      <ul class="footer__links">
+        <li><a href="https://github.com/karuppumca86" class="footer__link" target="_blank" rel="noopener noreferrer">GitHub</a></li>
+        <li><a href="https://www.linkedin.com/in/karuppuchamy-kaliappan" class="footer__link" target="_blank" rel="noopener noreferrer">LinkedIn</a></li>
+      </ul>
+    </div>
+  </footer>
+
+  <!-- Scripts -->
+  <script src="/js/main.js" defer></script>
+</body>
+</html>

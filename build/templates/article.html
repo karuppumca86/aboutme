@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="{{description}}">
+  <meta name="author" content="Karuppuchamy Kaliappan">
+  <title>{{title}} - Karuppuchamy Kaliappan</title>
+  
+  <!-- Favicon -->
+  <link rel="icon" href="/favicon.svg" type="image/svg+xml">
+  
+  <!-- Open Graph -->
+  <meta property="og:title" content="{{title}} - Karuppuchamy Kaliappan">
+  <meta property="og:description" content="{{description}}">
+  <meta property="og:type" content="article">
+  <meta property="og:url" content="https://yoursite.com/blog/{{slug}}.html">
+  <meta property="article:published_time" content="{{isoDate}}">
+  
+  <!-- Styles -->
+  <link rel="stylesheet" href="/css/reset.css">
+  <link rel="stylesheet" href="/css/typography.css">
+  <link rel="stylesheet" href="/css/layout.css">
+  <link rel="stylesheet" href="/css/components.css">
+  <link rel="stylesheet" href="/css/prism.css">
+</head>
+<body>
+  <!-- Skip Link for Accessibility -->
+  <a href="#main" class="skip-link">Skip to main content</a>
+
+  <!-- Site Header -->
+  <header class="site-header">
+    <div class="container">
+      <nav class="nav" aria-label="Main navigation">
+        <a href="/" class="nav__logo">Karuppuchamy Kaliappan</a>
+        
+        <!-- Mobile Toggle -->
+        <button 
+          class="nav__toggle" 
+          aria-expanded="false" 
+          aria-controls="nav-menu"
+          aria-label="Toggle navigation menu"
+        >
+          <span class="hamburger">
+            <span class="hamburger__line"></span>
+            <span class="hamburger__line"></span>
+            <span class="hamburger__line"></span>
+          </span>
+        </button>
+        
+        <!-- Navigation Menu -->
+        <ul id="nav-menu" class="nav__menu">
+          <li><a href="/" class="nav__link">Home</a></li>
+          <li><a href="/about.html" class="nav__link">About</a></li>
+          <li><a href="/experience.html" class="nav__link">Experience</a></li>
+          <li><a href="/blog/" class="nav__link nav__link--active">Writings</a></li>
+          <li><a href="/notes/" class="nav__link">Notes</a></li>
+          <li><a href="/contact.html" class="nav__link">Contact</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Main Content -->
+  <main id="main" class="main">
+    <article class="article">
+      <div class="container">
+        
+        <!-- Article Header -->
+        <header class="article__header">
+          <div class="article__meta">
+            <time datetime="{{isoDate}}">{{date}}</time>
+            <span class="badge badge--{{categorySlug}}">{{category}}</span>
+          </div>
+          <h1 class="article__title">{{title}}</h1>
+          <p class="article__description">{{description}}</p>
+        </header>
+
+        <!-- Article Content -->
+        <div class="article__content prose">
+          {{content}}
+        </div>
+
+        <!-- Article Footer -->
+        <footer class="article__footer">
+          <a href="/blog/" class="back-link">&larr; Back to Writings</a>
+        </footer>
+
+      </div>
+    </article>
+  </main>
+
+  <!-- Site Footer -->
+  <footer class="site-footer">
+    <div class="container">
+      <p>&copy; 2025 Karuppuchamy Kaliappan. All rights reserved.</p>
+      <ul class="footer__links">
+        <li><a href="https://github.com/karuppumca86" class="footer__link" target="_blank" rel="noopener noreferrer">GitHub</a></li>
+        <li><a href="https://www.linkedin.com/in/karuppuchamy-kaliappan" class="footer__link" target="_blank" rel="noopener noreferrer">LinkedIn</a></li>
+      </ul>
+    </div>
+  </footer>
+
+  <!-- Scripts -->
+  <script src="/js/main.js" defer></script>
+  <script src="/js/prism.js" defer></script>
+</body>
+</html>

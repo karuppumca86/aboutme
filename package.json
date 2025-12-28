@@ -1,0 +1,21 @@
+{
+  "name": "architect-personal-site",
+  "version": "1.0.0",
+  "description": "Professional personal website for a senior software architect",
+  "scripts": {
+    "build": "node build/build.js",
+    "serve": "npx http-server src -p 8000 -c-1",
+    "serve:dist": "npx http-server dist -p 8000 -c-1",
+    "lighthouse": "npx lighthouse http://localhost:8000 --view"
+  },
+  "keywords": [
+    "personal-website",
+    "portfolio",
+    "software-architect"
+  ],
+  "author": "",
+  "license": "MIT",
+  "devDependencies": {
+    "marked": "^17.0.1"
+  }
+}

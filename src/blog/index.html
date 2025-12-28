@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Technical essays on software architecture, distributed systems, platform engineering, and engineering leadership.">
+  <meta name="author" content="Karuppuchamy Kaliappan">
+  <title>Writings - Karuppuchamy Kaliappan</title>
+  
+  <!-- Favicon -->
+  <link rel="icon" href="/favicon.svg" type="image/svg+xml">
+  
+  <!-- Open Graph -->
+  <meta property="og:title" content="Writings - Karuppuchamy Kaliappan">
+  <meta property="og:description" content="Technical essays on software architecture, distributed systems, platform engineering, and engineering leadership.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://yoursite.com/blog/">
+  
+  <!-- Styles -->
+  <link rel="stylesheet" href="/css/reset.css">
+  <link rel="stylesheet" href="/css/typography.css">
+  <link rel="stylesheet" href="/css/layout.css">
+  <link rel="stylesheet" href="/css/components.css">
+</head>
+<body>
+  <!-- Skip Link for Accessibility -->
+  <a href="#main" class="skip-link">Skip to main content</a>
+
+  <!-- Site Header -->
+  <header class="site-header">
+    <div class="container">
+      <nav class="nav" aria-label="Main navigation">
+        <a href="/" class="nav__logo">Karuppuchamy Kaliappan</a>
+        
+        <!-- Mobile Toggle -->
+        <button 
+          class="nav__toggle" 
+          aria-expanded="false" 
+          aria-controls="nav-menu"
+          aria-label="Toggle navigation menu"
+        >
+          <span class="hamburger">
+            <span class="hamburger__line"></span>
+            <span class="hamburger__line"></span>
+            <span class="hamburger__line"></span>
+          </span>
+        </button>
+        
+        <!-- Navigation Menu -->
+        <ul id="nav-menu" class="nav__menu">
+          <li><a href="/" class="nav__link">Home</a></li>
+          <li><a href="/about.html" class="nav__link">About</a></li>
+          <li><a href="/contact.html" class="nav__link">Contact</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Main Content -->
+  <main id="main" class="main">
+    <div class="container">
+      
+      <!-- Page Header -->
+      <header class="page-header">
+        <h1 class="page-header__title">Writings</h1>
+        <p class="page-header__description">
+          Technical essays on architecture, systems design, and the lessons learned 
+          from building and operating software at scale.
+        </p>
+      </header>
+
+      <!-- Articles List -->
+      <section class="articles-list" aria-labelledby="articles-heading">
+        <h2 id="articles-heading" class="sr-only">All Articles</h2>
+        
+        <!-- Sample Article Card -->
+        <article class="article-card">
+          <div class="article-card__meta">
+            <time datetime="2025-01-15">January 15, 2025</time>
+            <span class="badge badge--architecture">Architecture</span>
+          </div>
+          <h3 class="article-card__title">
+            <a href="/blog/making-decisions-that-are-expensive-to-change.html">Making Decisions That Are Expensive to Change</a>
+          </h3>
+          <p class="article-card__description">
+            How to identify which architectural decisions will be hard to reverse, 
+            and how to approach them with appropriate care without falling into 
+            analysis paralysis.
+          </p>
+        </article>
+
+        <article class="article-card">
+          <div class="article-card__meta">
+            <time datetime="2025-01-08">January 8, 2025</time>
+            <span class="badge badge--distributed-systems">Distributed Systems</span>
+          </div>
+          <h3 class="article-card__title">
+            <a href="/blog/the-case-for-boring-technology.html">The Case for Boring Technology</a>
+          </h3>
+          <p class="article-card__description">
+            Why mature, well-understood technology often outperforms exciting new 
+            tools, and how to make the case for boring choices to stakeholders 
+            who want innovation.
+          </p>
+        </article>
+
+        <article class="article-card">
+          <div class="article-card__meta">
+            <time datetime="2024-12-20">December 20, 2024</time>
+            <span class="badge badge--platform">Platform</span>
+          </div>
+          <h3 class="article-card__title">
+            <a href="/blog/golden-paths-not-golden-cages.html">Golden Paths, Not Golden Cages</a>
+          </h3>
+          <p class="article-card__description">
+            Building internal platforms that teams actually want to use requires 
+            balancing standardization with flexibility. Here's how to find that 
+            balance.
+          </p>
+        </article>
+
+        <article class="article-card">
+          <div class="article-card__meta">
+            <time datetime="2024-12-10">December 10, 2024</time>
+            <span class="badge badge--leadership">Leadership</span>
+          </div>
+          <h3 class="article-card__title">
+            <a href="/blog/teaching-distributed-systems-intuition.html">Teaching Distributed Systems Intuition</a>
+          </h3>
+          <p class="article-card__description">
+            How to help engineers develop intuition for failure modes they've never 
+            seen, and why chaos engineering and game days are worth the investment.
+          </p>
+        </article>
+
+      </section>
+
+    </div>
+  </main>
+
+  <!-- Site Footer -->
+  <footer class="site-footer">
+    <div class="container">
+      <p>&copy; 2025 Karuppuchamy Kaliappan. All rights reserved.</p>
+      <ul class="footer__links">
+        <li><a href="https://github.com/karuppumca86" class="footer__link" target="_blank" rel="noopener noreferrer">GitHub</a></li>
+        <li><a href="https://www.linkedin.com/in/karuppuchamy-kaliappan" class="footer__link" target="_blank" rel="noopener noreferrer">LinkedIn</a></li>
+      </ul>
+    </div>
+  </footer>
+
+  <!-- Scripts -->
+  <script src="/js/main.js" defer></script>
+</body>
+</html>

@@ -1,0 +1,319 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="14+ years of experience in distributed systems, platform engineering, data architecture, and system evolution. Impact-focused work across multiple industries.">
+  <meta name="author" content="Karuppuchamy Kaliappan">
+  <title>Experience - Karuppuchamy Kaliappan</title>
+  
+  <!-- Favicon -->
+  <link rel="icon" href="/favicon.svg" type="image/svg+xml">
+  
+  <!-- Open Graph -->
+  <meta property="og:title" content="Experience - Karuppuchamy Kaliappan">
+  <meta property="og:description" content="14+ years of experience in distributed systems, platform engineering, data architecture, and system evolution.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://yoursite.com/experience.html">
+  
+  <!-- Styles -->
+  <link rel="stylesheet" href="/css/reset.css">
+  <link rel="stylesheet" href="/css/typography.css">
+  <link rel="stylesheet" href="/css/layout.css">
+  <link rel="stylesheet" href="/css/components.css">
+</head>
+<body>
+  <!-- Skip Link for Accessibility -->
+  <a href="#main" class="skip-link">Skip to main content</a>
+
+  <!-- Site Header -->
+  <header class="site-header">
+    <div class="container">
+      <nav class="nav" aria-label="Main navigation">
+        <a href="/" class="nav__logo">Karuppuchamy Kaliappan</a>
+        
+        <!-- Mobile Toggle -->
+        <button 
+          class="nav__toggle" 
+          aria-expanded="false" 
+          aria-controls="nav-menu"
+          aria-label="Toggle navigation menu"
+        >
+          <span class="hamburger">
+            <span class="hamburger__line"></span>
+            <span class="hamburger__line"></span>
+            <span class="hamburger__line"></span>
+          </span>
+        </button>
+        
+        <!-- Navigation Menu -->
+        <ul id="nav-menu" class="nav__menu">
+          <li><a href="/" class="nav__link">Home</a></li>
+          <li><a href="/about.html" class="nav__link">About</a></li>
+          <li><a href="/contact.html" class="nav__link">Contact</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Main Content -->
+  <main id="main" class="main">
+    <div class="container">
+      
+      <!-- Page Header -->
+      <header class="page-header">
+        <h1 class="page-header__title">Experience</h1>
+        <p class="page-header__description">
+          My work organized by problem domain, not job title. Each section covers context, 
+          constraints, key decisions, outcomes, and lessons learned.
+        </p>
+      </header>
+
+      <!-- Domain: Distributed Systems -->
+      <article class="domain-card" aria-labelledby="distributed-systems-heading">
+        <h2 id="distributed-systems-heading" class="domain-card__title">Distributed Systems</h2>
+        
+        <section class="domain-card__section">
+          <h3 class="domain-card__section-title">Context</h3>
+          <p>
+            Led architecture for a high-throughput event processing system handling 50,000+ 
+            events per second across a globally distributed infrastructure. The system served 
+            as the backbone for real-time analytics, triggering automated responses and 
+            feeding downstream ML pipelines.
+          </p>
+        </section>
+        
+        <section class="domain-card__section">
+          <h3 class="domain-card__section-title">Constraints</h3>
+          <ul>
+            <li>99.99% availability requirement with no more than 52 minutes of downtime per year</li>
+            <li>Sub-100ms end-to-end latency for critical event paths</li>
+            <li>Multi-region deployment with regulatory requirements for data residency</li>
+            <li>Legacy consumers that couldn't be modified, requiring backward compatibility</li>
+          </ul>
+        </section>
+        
+        <section class="domain-card__section">
+          <h3 class="domain-card__section-title">Key Decisions</h3>
+          <ul>
+            <li><strong>Event sourcing with CQRS</strong> — Separated read and write paths to optimize 
+            for different access patterns and enable independent scaling</li>
+            <li><strong>Partition-based architecture</strong> — Designed partitioning strategy around 
+            tenant ID to ensure strong ordering guarantees while enabling horizontal scaling</li>
+            <li><strong>Circuit breaker at service boundaries</strong> — Implemented bulkheads and 
+            circuit breakers to prevent cascade failures across services</li>
+          </ul>
+        </section>
+        
+        <section class="domain-card__section">
+          <h3 class="domain-card__section-title">Outcomes</h3>
+          <ul>
+            <li>Achieved 99.995% availability over two years of operation</li>
+            <li>Reduced P99 latency from 2.3 seconds to 89 milliseconds</li>
+            <li>Enabled 10x throughput growth without significant re-architecture</li>
+            <li>Zero data loss incidents during three major regional outages</li>
+          </ul>
+        </section>
+        
+        <section class="domain-card__section">
+          <h3 class="domain-card__section-title">Lessons Learned</h3>
+          <p>
+            The biggest challenge wasn't the distributed systems complexity itself—it was 
+            helping the team develop intuition for distributed failure modes. We invested 
+            heavily in chaos engineering and game days, which paid dividends when real 
+            incidents occurred. Teams that had practiced failure scenarios recovered faster 
+            and with less stress.
+          </p>
+        </section>
+      </article>
+
+      <!-- Domain: Platform Engineering -->
+      <article class="domain-card" aria-labelledby="platform-engineering-heading">
+        <h2 id="platform-engineering-heading" class="domain-card__title">Platform Engineering</h2>
+        
+        <section class="domain-card__section">
+          <h3 class="domain-card__section-title">Context</h3>
+          <p>
+            Built an internal developer platform from scratch for an organization of 200+ 
+            engineers across 30 teams. The goal was to reduce cognitive load on product 
+            teams by providing standardized paths for deployment, observability, and 
+            infrastructure provisioning.
+          </p>
+        </section>
+        
+        <section class="domain-card__section">
+          <h3 class="domain-card__section-title">Constraints</h3>
+          <ul>
+            <li>Existing heterogeneous tech stack (Java, Python, Node.js, Go) that couldn't be unified</li>
+            <li>Teams with varying levels of infrastructure expertise and autonomy needs</li>
+            <li>Strict security and compliance requirements (SOC2, GDPR) affecting deployment patterns</li>
+            <li>Need to support both greenfield and legacy applications during migration</li>
+          </ul>
+        </section>
+        
+        <section class="domain-card__section">
+          <h3 class="domain-card__section-title">Key Decisions</h3>
+          <ul>
+            <li><strong>Golden paths, not golden cages</strong> — Provided opinionated defaults that 
+            covered 80% of use cases while allowing escape hatches for legitimate edge cases</li>
+            <li><strong>Platform-as-product mindset</strong> — Treated internal teams as customers, 
+            with dedicated PM support, user research, and iterative improvement cycles</li>
+            <li><strong>Self-service with guardrails</strong> — Enabled teams to provision resources 
+            independently while enforcing organization-wide policies through automation</li>
+          </ul>
+        </section>
+        
+        <section class="domain-card__section">
+          <h3 class="domain-card__section-title">Outcomes</h3>
+          <ul>
+            <li>Reduced time-to-production for new services from 2 weeks to 4 hours</li>
+            <li>Achieved 85% adoption across product teams within 18 months</li>
+            <li>Decreased infrastructure-related incidents by 60% through standardization</li>
+            <li>Enabled security team to implement org-wide policy changes in hours instead of months</li>
+          </ul>
+        </section>
+        
+        <section class="domain-card__section">
+          <h3 class="domain-card__section-title">Lessons Learned</h3>
+          <p>
+            The technical implementation was the easy part. The hard part was organizational 
+            change management—helping teams trust the platform, gathering feedback effectively, 
+            and navigating the politics of centralized vs. decentralized control. Success 
+            required as much time with stakeholders as with code.
+          </p>
+        </section>
+      </article>
+
+      <!-- Domain: Data Architecture -->
+      <article class="domain-card" aria-labelledby="data-architecture-heading">
+        <h2 id="data-architecture-heading" class="domain-card__title">Data Architecture</h2>
+        
+        <section class="domain-card__section">
+          <h3 class="domain-card__section-title">Context</h3>
+          <p>
+            Designed and led implementation of a unified data platform consolidating data 
+            from 40+ source systems. The platform needed to serve operational analytics, 
+            regulatory reporting, and machine learning workloads while maintaining data 
+            quality and lineage.
+          </p>
+        </section>
+        
+        <section class="domain-card__section">
+          <h3 class="domain-card__section-title">Constraints</h3>
+          <ul>
+            <li>Data sources ranged from modern APIs to mainframe batch exports and manual spreadsheets</li>
+            <li>Different business units owned different sources with varying data quality standards</li>
+            <li>Regulatory requirements mandated complete data lineage and audit trails</li>
+            <li>Existing BI tools and reports needed to continue functioning during migration</li>
+          </ul>
+        </section>
+        
+        <section class="domain-card__section">
+          <h3 class="domain-card__section-title">Key Decisions</h3>
+          <ul>
+            <li><strong>Data mesh principles with pragmatic centralization</strong> — Domain teams 
+            owned their data products while a central team provided infrastructure and standards</li>
+            <li><strong>Schema evolution strategy</strong> — Adopted Apache Avro with a schema 
+            registry to enable independent evolution of producers and consumers</li>
+            <li><strong>Data quality as a first-class concern</strong> — Built automated quality 
+            checks into ingestion pipelines rather than treating quality as an afterthought</li>
+          </ul>
+        </section>
+        
+        <section class="domain-card__section">
+          <h3 class="domain-card__section-title">Outcomes</h3>
+          <ul>
+            <li>Consolidated from 12 data warehouses to a single unified platform</li>
+            <li>Reduced data pipeline failures from 15% to under 2%</li>
+            <li>Enabled self-service analytics for 500+ business users</li>
+            <li>Passed regulatory audit with zero findings on data lineage</li>
+          </ul>
+        </section>
+        
+        <section class="domain-card__section">
+          <h3 class="domain-card__section-title">Lessons Learned</h3>
+          <p>
+            Data projects live or die based on organizational buy-in, not technical excellence. 
+            Getting data owners to take responsibility for quality required creating incentive 
+            structures and making quality visible. The technical challenge of building the 
+            platform was dwarfed by the cultural challenge of improving data ownership.
+          </p>
+        </section>
+      </article>
+
+      <!-- Domain: System Evolution -->
+      <article class="domain-card" aria-labelledby="system-evolution-heading">
+        <h2 id="system-evolution-heading" class="domain-card__title">System Evolution</h2>
+        
+        <section class="domain-card__section">
+          <h3 class="domain-card__section-title">Context</h3>
+          <p>
+            Led a multi-year modernization program for a 15-year-old monolithic system 
+            that processed $2B+ in annual transactions. The system was critical to business 
+            operations but was becoming increasingly difficult to modify, with deployment 
+            risk and cycle time both growing year over year.
+          </p>
+        </section>
+        
+        <section class="domain-card__section">
+          <h3 class="domain-card__section-title">Constraints</h3>
+          <ul>
+            <li>System couldn't be taken offline—business operated 24/7 across multiple time zones</li>
+            <li>Deep integration with partner systems through undocumented, fragile interfaces</li>
+            <li>Tribal knowledge concentrated in a small group of long-tenured developers</li>
+            <li>Multiple failed modernization attempts had created organizational skepticism</li>
+          </ul>
+        </section>
+        
+        <section class="domain-card__section">
+          <h3 class="domain-card__section-title">Key Decisions</h3>
+          <ul>
+            <li><strong>Strangler fig pattern</strong> — Incrementally extracted functionality from 
+            the monolith rather than attempting a big-bang rewrite</li>
+            <li><strong>Characterization testing</strong> — Built comprehensive test harnesses around 
+            existing behavior before attempting changes</li>
+            <li><strong>Feature flags everywhere</strong> — Enabled gradual rollouts and instant 
+            rollbacks, reducing deployment risk to near-zero</li>
+          </ul>
+        </section>
+        
+        <section class="domain-card__section">
+          <h3 class="domain-card__section-title">Outcomes</h3>
+          <ul>
+            <li>Extracted 60% of functionality into modern services over 3 years</li>
+            <li>Reduced deployment frequency from monthly to daily</li>
+            <li>Cut average incident recovery time from 4 hours to 20 minutes</li>
+            <li>Zero business-impacting incidents during the entire migration</li>
+          </ul>
+        </section>
+        
+        <section class="domain-card__section">
+          <h3 class="domain-card__section-title">Lessons Learned</h3>
+          <p>
+            The strangler fig pattern works, but it requires patience and discipline that 
+            most organizations struggle to maintain. The key was celebrating incremental 
+            wins and making progress visible to leadership. We also learned that the best 
+            way to build trust after failed modernization attempts is to start with small, 
+            low-risk extractions and demonstrate success before tackling the hard parts.
+          </p>
+        </section>
+      </article>
+
+    </div>
+  </main>
+
+  <!-- Site Footer -->
+  <footer class="site-footer">
+    <div class="container">
+      <p>&copy; 2025 Karuppuchamy Kaliappan. All rights reserved.</p>
+      <ul class="footer__links">
+        <li><a href="https://github.com/karuppumca86" class="footer__link" target="_blank" rel="noopener noreferrer">GitHub</a></li>
+        <li><a href="https://www.linkedin.com/in/karuppuchamy-kaliappan" class="footer__link" target="_blank" rel="noopener noreferrer">LinkedIn</a></li>
+      </ul>
+    </div>
+  </footer>
+
+  <!-- Scripts -->
+  <script src="/js/main.js" defer></script>
+</body>
+</html>

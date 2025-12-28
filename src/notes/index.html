@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Quick thoughts, observations, and ideas about software architecture and engineering.">
+  <meta name="author" content="Karuppuchamy Kaliappan">
+  <title>Notes - Karuppuchamy Kaliappan</title>
+  
+  <!-- Favicon -->
+  <link rel="icon" href="/favicon.svg" type="image/svg+xml">
+  
+  <!-- Open Graph -->
+  <meta property="og:title" content="Notes - Karuppuchamy Kaliappan">
+  <meta property="og:description" content="Quick thoughts, observations, and ideas about software architecture and engineering.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://yoursite.com/notes/">
+  
+  <!-- Styles -->
+  <link rel="stylesheet" href="/css/reset.css">
+  <link rel="stylesheet" href="/css/typography.css">
+  <link rel="stylesheet" href="/css/layout.css">
+  <link rel="stylesheet" href="/css/components.css">
+</head>
+<body>
+  <!-- Skip Link for Accessibility -->
+  <a href="#main" class="skip-link">Skip to main content</a>
+
+  <!-- Site Header -->
+  <header class="site-header">
+    <div class="container">
+      <nav class="nav" aria-label="Main navigation">
+        <a href="/" class="nav__logo">Karuppuchamy Kaliappan</a>
+        
+        <!-- Mobile Toggle -->
+        <button 
+          class="nav__toggle" 
+          aria-expanded="false" 
+          aria-controls="nav-menu"
+          aria-label="Toggle navigation menu"
+        >
+          <span class="hamburger">
+            <span class="hamburger__line"></span>
+            <span class="hamburger__line"></span>
+            <span class="hamburger__line"></span>
+          </span>
+        </button>
+        
+        <!-- Navigation Menu -->
+        <ul id="nav-menu" class="nav__menu">
+          <li><a href="/" class="nav__link">Home</a></li>
+          <li><a href="/about.html" class="nav__link">About</a></li>
+          <li><a href="/contact.html" class="nav__link">Contact</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Main Content -->
+  <main id="main" class="main">
+    <div class="container">
+      
+      <!-- Page Header -->
+      <header class="page-header">
+        <h1 class="page-header__title">Notes</h1>
+        <p class="page-header__description">
+          Quick thoughts, observations, and ideas. Shorter and less polished than 
+          full articles—more like a public scratch pad.
+        </p>
+      </header>
+
+      <!-- Notes List -->
+      <section class="notes-list" aria-labelledby="notes-heading">
+        <h2 id="notes-heading" class="sr-only">All Notes</h2>
+        
+        <!-- Sample Note Card -->
+        <article class="note-card">
+          <time datetime="2025-01-18" class="note-card__date">Jan 18</time>
+          <div class="note-card__content">
+            <h3 class="note-card__title">
+              <a href="/notes/on-technical-debt-metaphors.html">On Technical Debt Metaphors</a>
+            </h3>
+            <p class="note-card__excerpt">
+              The "debt" metaphor breaks down because debt has predictable interest rates. 
+              Technical debt is more like deferred maintenance on a house—you don't know 
+              the cost until something breaks.
+            </p>
+          </div>
+        </article>
+
+        <article class="note-card">
+          <time datetime="2025-01-12" class="note-card__date">Jan 12</time>
+          <div class="note-card__content">
+            <h3 class="note-card__title">
+              <a href="/notes/documentation-as-artifact.html">Documentation as Artifact</a>
+            </h3>
+            <p class="note-card__excerpt">
+              Writing documentation isn't just about communicating—it's about discovering 
+              what you actually built. The act of explaining forces clarity.
+            </p>
+          </div>
+        </article>
+
+        <article class="note-card">
+          <time datetime="2025-01-05" class="note-card__date">Jan 5</time>
+          <div class="note-card__content">
+            <h3 class="note-card__title">
+              <a href="/notes/the-second-system-trap.html">The Second System Trap</a>
+            </h3>
+            <p class="note-card__excerpt">
+              Every team that rewrites a system from scratch learns why the old system 
+              had all those weird edge cases. Humility about the complexity of existing 
+              systems is hard-won.
+            </p>
+          </div>
+        </article>
+
+      </section>
+
+    </div>
+  </main>
+
+  <!-- Site Footer -->
+  <footer class="site-footer">
+    <div class="container">
+      <p>&copy; 2025 Karuppuchamy Kaliappan. All rights reserved.</p>
+      <ul class="footer__links">
+        <li><a href="https://github.com/karuppumca86" class="footer__link" target="_blank" rel="noopener noreferrer">GitHub</a></li>
+        <li><a href="https://www.linkedin.com/in/karuppuchamy-kaliappan" class="footer__link" target="_blank" rel="noopener noreferrer">LinkedIn</a></li>
+      </ul>
+    </div>
+  </footer>
+
+  <!-- Scripts -->
+  <script src="/js/main.js" defer></script>
+</body>
+</html>
